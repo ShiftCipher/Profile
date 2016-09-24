@@ -1,0 +1,12 @@
+{
+  "name": "Profile",
+  "description": "Profile Generator",
+  "homepage": "https://github.com/codeapps/Profile",
+
+  "require": {
+    "kevinlebrun/colors.php": "0.*"
+  },
+  "autoload": {
+        "psr-0": { "Colors": "src/" }
+    }
+}
