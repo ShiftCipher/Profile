@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Language;
+
 class LanguagesController extends Controller
 {
     /**

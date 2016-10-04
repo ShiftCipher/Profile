@@ -4,12 +4,21 @@ Background in computational design and digital manufacturing is linked to vision
 Passionate about learning and improving the quality of his work, techniques and tools.
 
 Leader
-Polymath
 Generalist
 Tech Entrepreneur
 Computer Scientist
 Data Scientist
 Machine Learning Engineer
+Polymath
+Polyglot
+  [x] Spanish
+  [x] English
+  [] French
+  [] Japanese
+  [] Russian
+  [] Mandarin
+  [] Dutch
+  [] Korean
 
 CAD Specialist
 CAM Specialist
@@ -32,16 +41,6 @@ Senior Apple Developer
 Senior Web Developer
 Senior Game Developer
 Senior VR Developer
-
-Polyglot
-  [x] Spanish
-  [x] English
-  [] French
-  [] Japanese
-  [] Russian
-  [] Mandarin
-  [] Dutch
-  [] Korean
 
 ## Studies
 [x] Curso de Programación de Apps Moviles

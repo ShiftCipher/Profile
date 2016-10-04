@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Education;
+use App\Photo;
 
-class EducationsController extends Controller
+class PhotosController extends Controller
 {
     /**
      * Display a listing of the resource.

@@ -22,7 +22,6 @@ Route::resource('studies', 'StudiesController');
 Route::resource('skills', 'SkillsController');
 Route::resource('languages', 'LanguagesController');
 Route::resource('courses', 'CoursesController');
-Route::resource('experiences', 'ExperiencesController');
 Route::resource('projects', 'ProjectsController');
 Route::resource('clients', 'ClientsController');
 Route::resource('services', 'ServicesController');

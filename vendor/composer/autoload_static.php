@@ -287,7 +287,18 @@ class ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0
     );
 
     public static $classMap = array (
+        'CreateCertificatesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_033313_create_certificates_table.php',
+        'CreateClientsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030510_create_clients_table.php',
+        'CreateCoursesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030537_create_courses_table.php',
+        'CreateEducationsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030739_create_educations_table.php',
+        'CreateExperiencesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030755_create_experiences_table.php',
+        'CreateLanguagesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030811_create_languages_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreatePhotosTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_033917_create_photos_table.php',
+        'CreateProjectPhotoTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030849_create_project_photo_table.php',
+        'CreateProjectsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030822_create_projects_table.php',
+        'CreateServicesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030834_create_services_table.php',
+        'CreateSkillsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_032602_create_skills_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
