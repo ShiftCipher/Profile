@@ -85,6 +85,8 @@ class SkillsController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Skill::findOrFail($id)->delete();
+      flash('Delete Complete!', 'success');
+      return redirect('skills');
     }
 }

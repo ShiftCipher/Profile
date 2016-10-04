@@ -6,13 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateCategoriesTable' => $baseDir . '/database/migrations/2016_10_04_050907_create_categories_table.php',
     'CreateCertificatesTable' => $baseDir . '/database/migrations/2016_10_04_033313_create_certificates_table.php',
     'CreateClientsTable' => $baseDir . '/database/migrations/2016_10_04_030510_create_clients_table.php',
     'CreateCoursesTable' => $baseDir . '/database/migrations/2016_10_04_030537_create_courses_table.php',
     'CreateLanguagesTable' => $baseDir . '/database/migrations/2016_10_04_030811_create_languages_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePhotosTable' => $baseDir . '/database/migrations/2016_10_04_033917_create_photos_table.php',
-    'CreateProjectPhotoTable' => $baseDir . '/database/migrations/2016_10_04_030849_create_project_photo_table.php',
     'CreateProjectsTable' => $baseDir . '/database/migrations/2016_10_04_030822_create_projects_table.php',
     'CreateServicesTable' => $baseDir . '/database/migrations/2016_10_04_030834_create_services_table.php',
     'CreateSkillsTable' => $baseDir . '/database/migrations/2016_10_04_032602_create_skills_table.php',

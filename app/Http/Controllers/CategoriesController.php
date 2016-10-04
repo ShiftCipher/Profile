@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Certificate;
-
-class CertificatesController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +15,9 @@ class CertificatesController extends Controller
      */
     public function index()
     {
-      $certificates = Certificate::all();
+      $categories = Category::all();
 
-      return view('certificates.index', compact('certificates'));
+      return view('categories.index', compact('categories'));
     }
 
     /**
@@ -85,8 +83,8 @@ class CertificatesController extends Controller
      */
     public function destroy($id)
     {
-      Certificate::findOrFail($id)->delete();
+      Category::findOrFail($id)->delete();
       flash('Delete Complete!', 'success');
-      return redirect('certificates');
+      return redirect('categories');
     }
 }

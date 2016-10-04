@@ -85,6 +85,8 @@ class LanguagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Language::findOrFail($id)->delete();
+      flash('Delete Complete!', 'success');
+      return redirect('languages');
     }
 }

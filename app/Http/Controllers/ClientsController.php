@@ -85,6 +85,8 @@ class ClientsController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Client::findOrFail($id)->delete();
+      flash('Delete Complete!', 'success');
+      return redirect('clients');
     }
 }

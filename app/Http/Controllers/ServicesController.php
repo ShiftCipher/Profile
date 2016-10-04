@@ -85,6 +85,8 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Service::findOrFail($id)->delete();
+      flash('Delete Complete!', 'success');
+      return redirect('services');
     }
 }

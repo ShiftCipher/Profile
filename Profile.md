@@ -185,8 +185,6 @@ Noviembre de 2015
 [] Python Engineer Thinkful
 [] Data Science in Python Thinkful
 [] Data Analyst Nanodegree Udacity
-
-## Big Data and Data Mining
 [x] Codecademy Learn Java
 [] HADOOP
 [] Information Retrieval

@@ -85,6 +85,8 @@ class StudiesController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Study::findOrFail($id)->delete();
+      flash('Delete Complete!', 'success');
+      return redirect('studies');
     }
 }

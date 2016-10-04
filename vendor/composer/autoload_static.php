@@ -16,6 +16,7 @@ class ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '52e7a7be53e450a806e4676df53542a5' => __DIR__ . '/../..' . '/app/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -287,13 +288,13 @@ class ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0
     );
 
     public static $classMap = array (
+        'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_050907_create_categories_table.php',
         'CreateCertificatesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_033313_create_certificates_table.php',
         'CreateClientsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030510_create_clients_table.php',
         'CreateCoursesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030537_create_courses_table.php',
         'CreateLanguagesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030811_create_languages_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePhotosTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_033917_create_photos_table.php',
-        'CreateProjectPhotoTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030849_create_project_photo_table.php',
         'CreateProjectsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030822_create_projects_table.php',
         'CreateServicesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030834_create_services_table.php',
         'CreateSkillsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_032602_create_skills_table.php',
