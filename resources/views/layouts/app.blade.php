@@ -43,6 +43,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     @if(Auth::check())
+                      <li><a href="{{ url('categories') }}">{{trans('strings.categories')}}</a></li>
                       <li><a href="{{ url('certificates') }}">{{trans('strings.certificates')}}</a></li>
                       <li><a href="{{ url('clients') }}">{{trans('strings.clients')}}</a></li>
                       <li><a href="{{ url('courses') }}">{{trans('strings.courses')}}</a></li>

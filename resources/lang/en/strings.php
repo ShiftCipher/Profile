@@ -2,6 +2,7 @@
 
 return [
 
+'categories' => 'Categories',
 'certificates' => 'Certificates',
 'clients' => 'Clients',
 'courses' => 'Courses',
