@@ -46,7 +46,7 @@
                       <li><a href="{{ url('certificates') }}">{{trans('strings.certificates')}}</a></li>
                       <li><a href="{{ url('clients') }}">{{trans('strings.clients')}}</a></li>
                       <li><a href="{{ url('courses') }}">{{trans('strings.courses')}}</a></li>
-                      <li><a href="{{ url('educations') }}">{{trans('strings.educations')}}</a></li>
+                      <li><a href="{{ url('studies') }}">{{trans('strings.studies')}}</a></li>
                       <li><a href="{{ url('languages') }}">{{trans('strings.languages')}}</a></li>
                       <li><a href="{{ url('photos') }}">{{trans('strings.photos')}}</a></li>
                       <li><a href="{{ url('projects') }}">{{trans('strings.projects')}}</a></li>

@@ -18,10 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::resource('studies', 'StudiesController');
-Route::resource('skills', 'SkillsController');
-Route::resource('languages', 'LanguagesController');
-Route::resource('courses', 'CoursesController');
-Route::resource('projects', 'ProjectsController');
+Route::resource('certificates', 'CertificatesController');
 Route::resource('clients', 'ClientsController');
+Route::resource('courses', 'CoursesController');
+Route::resource('studies', 'StudiesController');
+Route::resource('languages', 'LanguagesController');
+Route::resource('photos', 'PhotosController');
+Route::resource('projects', 'ProjectsController');
 Route::resource('services', 'ServicesController');
+Route::resource('skills', 'SkillsController');

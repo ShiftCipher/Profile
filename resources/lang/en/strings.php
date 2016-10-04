@@ -5,7 +5,7 @@ return [
 'certificates' => 'Certificates',
 'clients' => 'Clients',
 'courses' => 'Courses',
-'educations' => 'Education',
+'studies' => 'Studies',
 'languages' => 'Languages',
 'photos' => 'Photos',
 'projects' => 'Projects',

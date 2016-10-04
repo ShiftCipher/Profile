@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Education;
+use App\Study;
 
-class EducationsController extends Controller
+class StudiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class EducationsController extends Controller
      */
     public function index()
     {
-      $educations = Education::all();
+      $studies = Study::all();
 
-      return view('educations.index', compact('educations'));
+      return view('studies.index', compact('studies'));
     }
 
     /**
