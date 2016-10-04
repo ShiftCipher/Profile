@@ -17,6 +17,17 @@ return [
 'store' => 'Store',
 'image' => 'Image',
 'edit' => 'Edit',
-
+'company' => 'Company',
+'code' => 'Code',
+'date' => 'Date',
+'url' => 'URL',
+'photo' => 'Photo',
+'id' => 'ID',
+'actions' => 'Actions',
+'start' => 'Start',
+'end' => 'End',
+'cellphone' => 'Cellphone',
+'telephone' => 'Telephone',
+'address' => 'Address'
 
 ];

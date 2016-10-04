@@ -21,7 +21,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-      $categories = Category::all();
+      $categories = Category::all()->sortBy("name");
 
       return view('categories.index', compact('categories'));
     }
@@ -77,9 +77,7 @@ class CategoriesController extends Controller
         } else {
           $request->photo = '/img/categories/category.png';
         }
-        $category->description = $request->description;
         $category->name = $request->name;
-        $category->views = 0;
         $category->photo = $request->photo;
         $category->save();
         flash('Create Successful!', 'success');
@@ -117,12 +115,13 @@ class CategoriesController extends Controller
           ->withErrors($validator)
           ->withInput();
       } else {
-        $category->photo = $request->photo;
-        $category->name = $request->name;
-        $category->save();
-        flash('Update Complete!', 'success');
-        return redirect('categories');
+        $request->photo = '/img/categories/category.png';
       }
+      $category->photo = $request->photo;
+      $category->name = $request->name;
+      $category->save();
+      flash('Update Complete!', 'success');
+      return redirect('categories');
     }
 
     /**

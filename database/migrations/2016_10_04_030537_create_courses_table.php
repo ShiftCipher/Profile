@@ -15,13 +15,13 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id')->unsigned()->nullable();
-            $table->string('company');
             $table->string('name');
-            $table->string('photo')->nullable();
-            $table->date('start');
-            $table->date('end');
+            $table->string('company')->nullable();
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
             $table->boolean('complete');
+            $table->string('photo')->nullable();
+            $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

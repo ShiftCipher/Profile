@@ -14,6 +14,8 @@
   {!! Form::label('Photo', trans('strings.image')) !!}
   {!! Form::file('photo', null, ['class' => 'form-control']) !!}
 
+  <br>
+
   {{ Form::submit('Update', array('class' => 'btn btn-success')) }}
 
 {!! Form::close() !!}

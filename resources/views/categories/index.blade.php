@@ -10,6 +10,7 @@
 
     <thead>
       <tr>
+        <th>ID</th>
         <th>Photo</th>
         <th>Name</th>
         <th colspan="2">Actions</th>
@@ -18,6 +19,7 @@
 
     @foreach ($categories as $category)
       <tr>
+        <td>{{ $category->id }}</td>
         <td><img src="{{ $category->photo }}" alt="{{ $category->name }}" style="weight:50px; height:50px;"/></td>
         <td><a href="/categories/{{ $category->id }}">{{ $category->name or 'Blank' }}</a></td>
         <td>

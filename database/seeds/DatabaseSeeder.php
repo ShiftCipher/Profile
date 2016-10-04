@@ -11,11 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      factory(App\User::class)->create([
-        'name' => 'Daniel Tarazona',
-        'nickname' => 'xYz',
-        'email' => 'admin@admin.com',
-        'password' => bcrypt("123456")
-      ]);
+      $this->call(UsersTableSeeder::class);
+      $this->call(CategoriesTableSeeder::class);
+      $this->call(CertificatesTableSeeder::class);
+      $this->call(ClientsTableSeeder::class);
+      $this->call(CoursesTableSeeder::class);
     }
 }

@@ -33,3 +33,39 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
     'photo' => "/img/categories/category.png",
   ];
 });
+
+$factory->define(App\Certificate::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'company' => $faker->name,
+    'url' => $faker->url,
+    'code' => str_random(10),
+    'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'photo' => "/img/certificates/certificate.png",
+  ];
+});
+
+$factory->define(App\Client::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'url' => $faker->url,
+    'address' => $faker->address,
+    'telephone' => $faker->phoneNumber,
+    'cellphone' => $faker->phoneNumber,
+    'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'end' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'photo' => "/img/clients/client.png",
+  ];
+});
+
+$factory->define(App\Course::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'company' => $faker->name,
+    'complete' => false,
+    'category_id' => 1,
+    'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'end' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'photo' => "/img/courses/course.png",
+  ];
+});

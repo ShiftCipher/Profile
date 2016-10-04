@@ -15,13 +15,13 @@ class CreateStudiesTable extends Migration
     {
         Schema::create('studies', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id')->unsigned()->nullable();
-            $table->string('company');
             $table->string('name');
+            $table->string('company')->nullable();
             $table->string('photo')->nullable();
-            $table->date('start');
-            $table->date('end');
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
             $table->boolean('complete');
+            $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }
