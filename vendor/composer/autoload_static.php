@@ -291,7 +291,6 @@ class ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0
         'CreateClientsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030510_create_clients_table.php',
         'CreateCoursesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030537_create_courses_table.php',
         'CreateEducationsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030739_create_educations_table.php',
-        'CreateExperiencesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030755_create_experiences_table.php',
         'CreateLanguagesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_030811_create_languages_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePhotosTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_04_033917_create_photos_table.php',

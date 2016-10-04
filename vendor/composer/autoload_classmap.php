@@ -10,7 +10,6 @@ return array(
     'CreateClientsTable' => $baseDir . '/database/migrations/2016_10_04_030510_create_clients_table.php',
     'CreateCoursesTable' => $baseDir . '/database/migrations/2016_10_04_030537_create_courses_table.php',
     'CreateEducationsTable' => $baseDir . '/database/migrations/2016_10_04_030739_create_educations_table.php',
-    'CreateExperiencesTable' => $baseDir . '/database/migrations/2016_10_04_030755_create_experiences_table.php',
     'CreateLanguagesTable' => $baseDir . '/database/migrations/2016_10_04_030811_create_languages_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePhotosTable' => $baseDir . '/database/migrations/2016_10_04_033917_create_photos_table.php',
