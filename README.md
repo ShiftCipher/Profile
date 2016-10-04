@@ -19,3 +19,6 @@ If you discover a security vulnerability within Profile, please send an e-mail t
 The Profle is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 ## To Do
+- Category Photo
+- Category Add
+- Category Edit

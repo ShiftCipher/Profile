@@ -18,7 +18,7 @@ class CreateCoursesTable extends Migration
             $table->integer('category_id')->unsigned()->nullable();
             $table->string('company');
             $table->string('name');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->date('start');
             $table->date('end');
             $table->boolean('complete');

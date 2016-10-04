@@ -18,7 +18,7 @@ class CreateProjectsTable extends Migration
             $table->integer('category_id')->unsigned()->nullable();
             $table->string('name');
             $table->text('description');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->date('start');
             $table->date('end');
             $table->boolean('complete');

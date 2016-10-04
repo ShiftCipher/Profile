@@ -11,6 +11,12 @@ return [
 'photos' => 'Photos',
 'projects' => 'Projects',
 'services' => 'Services',
-'skills' => 'Skills'
+'skills' => 'Skills',
+'create' => 'Create',
+'name' => 'Name',
+'store' => 'Store',
+'image' => 'Image',
+'edit' => 'Edit',
+
 
 ];

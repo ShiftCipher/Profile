@@ -22,7 +22,7 @@ class CreateClientsTable extends Migration
             $table->string('url')->nullable();
             $table->date('start')->nullable();
             $table->date('end')->nullable();
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

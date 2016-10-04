@@ -17,7 +17,7 @@ class CreateCertificatesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('code');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->date('date');
             $table->timestamps();
         });

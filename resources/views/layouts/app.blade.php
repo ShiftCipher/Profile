@@ -88,8 +88,9 @@
         </div>
     </nav>
 
-    @yield('content')
-
+    <div class="container">
+      @yield('content')
+    </div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
