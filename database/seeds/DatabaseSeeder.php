@@ -2,8 +2,6 @@
 
 use Illuminate\Database\Seeder;
 
-use App\User;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,35 +11,32 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      factory(User::class)->create([
-        'name' => 'Daniel',
+      factory(App\User::class)->create([
+        'name' => 'Daniel Tarazona',
+        'nickname' => 'xYz',
         'email' => 'admin@admin.com',
-        'password' => bcrypt("123456"),
-        'nickname' => 'xYz'
+        'password' => bcrypt("123456")
       ]);
 
-      factory(Category::class)->create(['name' => 'UIX']);
-      factory(Category::class)->create(['name' => 'Front-end']);
-      factory(Category::class)->create(['name' => 'Machine Learning']);
-      factory(Category::class)->create(['name' => 'Back-end']);
-      factory(Category::class)->create(['name' => 'JavaScript']);
-      factory(Category::class)->create(['name' => 'PHP']);
-      factory(Category::class)->create(['name' => 'Architecture']);
-      factory(Category::class)->create(['name' => 'Games']);
-      factory(Category::class)->create(['name' => 'Mathematics']);
-      factory(Category::class)->create(['name' => 'Computer Science']);
-      factory(Category::class)->create(['name' => 'Hacking']);
-      factory(Category::class)->create(['name' => 'Data Analyst']);
-      factory(Category::class)->create(['name' => 'High Performance Computer']);
-      factory(Category::class)->create(['name' => 'Apple Developer']);
-      factory(Category::class)->create(['name' => 'Operating Systems']);
-      factory(Category::class)->create(['name' => 'Programming Languages']);
-      factory(Category::class)->create(['name' => 'Computer Graphics']);
-      factory(Category::class)->create(['name' => 'Robotics']);
-      factory(Category::class)->create(['name' => 'Body Training']);
-
-
-
+      factory(App\Category::class)->create(['name' => 'UIX']);
+      factory(App\Category::class)->create(['name' => 'Front-end']);
+      factory(App\Category::class)->create(['name' => 'Machine Learning']);
+      factory(App\Category::class)->create(['name' => 'Back-end']);
+      factory(App\Category::class)->create(['name' => 'JavaScript']);
+      factory(App\Category::class)->create(['name' => 'PHP']);
+      factory(App\Category::class)->create(['name' => 'Architecture']);
+      factory(App\Category::class)->create(['name' => 'Games']);
+      factory(App\Category::class)->create(['name' => 'Mathematics']);
+      factory(App\Category::class)->create(['name' => 'Computer Science']);
+      factory(App\Category::class)->create(['name' => 'Hacking']);
+      factory(App\Category::class)->create(['name' => 'Data Analyst']);
+      factory(App\Category::class)->create(['name' => 'High Performance Computer']);
+      factory(App\Category::class)->create(['name' => 'Apple Developer']);
+      factory(App\Category::class)->create(['name' => 'Operating Systems']);
+      factory(App\Category::class)->create(['name' => 'Programming Languages']);
+      factory(App\Category::class)->create(['name' => 'Computer Graphics']);
+      factory(App\Category::class)->create(['name' => 'Robotics']);
+      factory(App\Category::class)->create(['name' => 'Body Training']);
 
     }
 }

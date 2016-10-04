@@ -17,12 +17,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'first_name' => $faker->name,
-        'last_name' => $faker->name,
-        'first_lastname' => $faker->name,
-        'last_lastname' => $faker->name,
         'nickname' => $faker->name,
-        'adress' => $faker->address,
+        'address' => $faker->address,
         'telephone' => $faker->phoneNumber,
         'cellphone' => $faker->phoneNumber,
         'password' => $password ?: $password = bcrypt('123456'),
@@ -31,7 +27,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Category::class, function (Faker\Generator $faker) {
   return [
     'name' => $faker->name,
     'photo' => "/img/categories/category.png",
