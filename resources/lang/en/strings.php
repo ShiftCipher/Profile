@@ -28,6 +28,8 @@ return [
 'end' => 'End',
 'cellphone' => 'Cellphone',
 'telephone' => 'Telephone',
-'address' => 'Address'
+'address' => 'Address',
+'category' => 'Category',
+'complete' => 'Complete',
 
 ];

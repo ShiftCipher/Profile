@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
+use Intervention\Image\ImageManagerStatic as Image;
 
 use App\Http\Requests;
 
 use App\Course;
+use App\Category;
+use File;
 
 class CoursesController extends Controller
 {
@@ -29,8 +34,7 @@ class CoursesController extends Controller
      */
     public function create()
     {
-      $categories = Category::all()->sortBy("name");
-
+      $categories = Category::pluck('name', 'id')->sortBy('name');
       return view('courses.create', compact('categories'));
     }
 
@@ -63,11 +67,16 @@ class CoursesController extends Controller
           $request->photo = '/img/courses/course.png';
         }
         $course = new Course;
+        if ($request->complete === true) {
+          $course->complete = true;
+        } else {
+          $course->complete = false;
+        }
         $course->name = $request->name;
         $course->company = $request->company;
         $course->start = $request->start;
         $course->end = $request->end;
-        $course->complete = $request->complete;
+        $course->url = $request->url;
         $course->photo = $request->photo;
         $course->category_id = $request->category_id;
         $course->save();
@@ -97,7 +106,9 @@ class CoursesController extends Controller
     public function edit($id)
     {
       $course = Course::findOrFail($id);
-      return view('courses.edit', compact('course'));
+      $categories = Category::pluck('name', 'id')->sortBy('name');
+
+      return view('courses.edit', compact('course', 'categories'));
     }
 
     /**
@@ -109,7 +120,7 @@ class CoursesController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $course = Client::findOrFail($id);
+      $course = Course::findOrFail($id);
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
@@ -124,12 +135,17 @@ class CoursesController extends Controller
       $course->company = $request->company;
       $course->start = $request->start;
       $course->end = $request->end;
-      $course->complete = $request->complete;
+      if ($request->complete === true) {
+        $course->complete = true;
+      } else {
+        $course->complete = false;
+      }
+      $course->url = $request->url;
       $course->photo = $request->photo;
       $course->category_id = $request->category_id;
       $course->save();
       flash('Update Complete!', 'success');
-      return redirect('clients');
+      return redirect('courses');
     }
 
     /**
@@ -145,17 +161,18 @@ class CoursesController extends Controller
       return redirect('courses');
     }
 
-
     public function rules()
     {
       return [
         'name' => 'string|required|max:255|unique:courses',
         'company' => 'string|max:255',
-        'complete' => 'boolean|required',
+        'complete' => 'boolean',
         'category_id' => 'integer|required',
         'photo' => 'image|optional',
         'end' => 'date',
         'start' => 'date',
+        'url' => 'string',
       ];
     }
+
 }
