@@ -6,5 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Colors' => array($baseDir . '/src', $vendorDir . '/kevinlebrun/colors.php/src'),
 );

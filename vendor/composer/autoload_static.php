@@ -4,23 +4,35 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit073a31802394d94f5662c7233bc61410
+class ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0
 {
-    public static $prefixesPsr0 = array (
-        'C' => 
+    public static $prefixLengthsPsr4 = array (
+        'A' => 
         array (
-            'Colors' => 
-            array (
-                0 => __DIR__ . '/../..' . '/src',
-                1 => __DIR__ . '/..' . '/kevinlebrun/colors.php/src',
-            ),
+            'App\\' => 4,
         ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
+    );
+
+    public static $classMap = array (
+        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
+        'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
+        'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit073a31802394d94f5662c7233bc61410::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitefba7ba36eef0e1de997f7c9b8c264b0::$classMap;
 
         }, null, ClassLoader::class);
     }

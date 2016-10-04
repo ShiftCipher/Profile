@@ -43,7 +43,7 @@ Polyglot
   [] Dutch
   [] Korean
 
-## Studies
+## Studies
 [x] Curso de Programación de Apps Moviles
 Universidad Complutense de Madrid - Google
 
@@ -51,15 +51,15 @@ Universidad Complutense de Madrid - Google
 MIT - Massachusetts Institute of Technology - Universidad ICESI
 Junio - Julio de 2013
 
-## HTML / CSS / SASS
+## HTML / CSS / SASS
 [x] SASS
 [] Codecademy Learn HTML & CSS
 
-## Javascript
+## JavaScript
 [x] SoloLearn JavaScript Basics
 Certificate of Completion Licencia 1024-389295
 Noviembre de 2015
-[] jQuery
+[] Codecademy jQuery
 [] Node.js Fundamentals
 [] Node Engineer Thinkful
 [] CIW Javascript Specialist
@@ -68,6 +68,48 @@ Noviembre de 2015
 [x] Codecademy PHP
 [x] SoloLearn PHP Course
 Certificate of Completion License 1060-389295
+
+[x] Laracast The PHP Practitioner
+[x] Laracast Object-Oriented Bootcamp
+[x] Laracast PHP 7 Up and Running
+[x] Laracast Single Rules for Simpler Code
+[x] Laracast How to Build Command-Line Apps
+[x] Laracast Laravel From Scratch
+[x] Laracast Advanced Eloquent
+[] Laracast Eloquent Techniques
+[] Laracast Whip Monstrous Code Into Shape
+[] Laracast Incremental APIs
+[] Laracast Design Patterns in PHP
+[] Laracast SOLID Principles in PHP
+[] Laracast What's New in Laravel 5.1
+[x] Laracast What's New in Laravel 5.2
+[] Laracast What's New in Laravel 5.3
+[x] Laracast Intermediate Laravel
+[] Laracast Discover Symfony Components
+[] Laracast Laravel Authentication Techniques
+[] Laracast Real-time Laravel with Socket.io
+[] Laracast Painless Builds With Elixir
+[] Laracast Testing Laravel
+[] Laracast Testing Jargon
+[] Laracast Intuitive Integration Testing
+[] Laracast The Lifecycle of a New Feature
+[] Laracast ES2015 Crash Course
+[] Laracast Charting and You
+[] Laracast Vim Mastery
+[] Laracast Understand Regular Expressions
+[] Laracast Git Me Some Version Control
+[] Laracast Learn Redis Through Examples
+[] Laracast Learn Flexbox Through Examples
+[] Laracast How Do I
+[] Laracast Whatcha Working On
+[] Laracast Russian-Doll Caching in Laravel
+[] Laracast Modern CSS Workflow
+[] Laracast Build Your First App
+[] Laracast Commands and Domain Events
+[] Laracast Billing With Stripe
+[] Laracast Be Awesome in PHPStorm
+[] Laracast Server Management With Forge
+[] Laracast Envoyer
 
 [x] Pluralsight PHP: Get Started
 [x] Pluralsight PHP Fundamentals
@@ -94,66 +136,29 @@ Certificate of Completion License 1060-389295
 [] Pluralsight Object-oriented PHP Classical Inheritance Model
 [] Pluralsight RESTful Web Services with PHP and Laravel
 
-### Laracast
-[] The PHP Practitioner
-[x] Object-Oriented Bootcamp
-[x] PHP 7 Up and Running
-[x] Single Rules for Simpler Code
-[x] How to Build Command-Line Apps
-[x] Laravel From Scratch
-[x] Advanced Eloquent
-[] Eloquent Techniques
-[] Whip Monstrous Code Into Shape
-[] Incremental APIs
-[] Design Patterns in PHP
-[] SOLID Principles in PHP
-[] What's New in Laravel 5.1
-[x] What's New in Laravel 5.2
-[] What's New in Laravel 5.3
-[x] Intermediate Laravel
-[] Discover Symfony Components
-[] Laravel Authentication Techniques
-[] Real-time Laravel with Socket.io
-[] Painless Builds With Elixir
-[] Testing Laravel
-[] Testing Jargon
-[] Intuitive Integration Testing
-[] The Lifecycle of a New Feature
-[] ES2015 Crash Course
-[] Charting and You
-[] Vim Mastery
-[] Understand Regular Expressions
-[] Git Me Some Version Control
-[] Learn Redis Through Examples
-[] Learn Flexbox Through Examples
-[] How Do I
-[] Whatcha Working On
-[] Russian-Doll Caching in Laravel
-[] Modern CSS Workflow
-[] Build Your First App
-[] Commands and Domain Events
-[] Billing With Stripe
-[] Be Awesome in PHPStorm
-[] Server Management With Forge
-[] Envoyer
-
-## Autodesk Path
-[] Autodesk AutoCAD Certified Professional
-[] Autodesk Revit Certified Professional
+## Architecture Path
+[x] Autodesk AutoCAD Certified Professional
+[x] Autodesk Revit Certified Professional
 [] Autodesk Maya Certified Professional
-[] Rhino 5 Expert - Level 1 Certification Exam
+[x] Rhino 5 Expert - Level 1 Certification Exam
 [] Rhino 5 Expert - Level 2 Certification Exam
-[] Adobe Photoshop CC Certified Expert (ACE)
+[x] Adobe Photoshop CC Certified Expert (ACE)
 [] Adobe Illustrator CC Certified Expert (ACE)
-
-## Architecture Path
 [] École d'Architecture de Paris Val-de-Seine
+
+## Games
+[] Maya
+[] ZBrush
+
+## Mathematics
+[] Khan Academy
+[] Sangakoo
 
 ## Computer Science Path
 [] Software Engineer - UNAD Bachelor Degree in Software Engineering
 [] Georgia Tech Master of Science in Computer Science
 
-## Hacking Path
+## Hacking Path
 [] Bash
 [] ZShell
 [] CEH Certified Ethical Hacker
@@ -166,7 +171,7 @@ Certificate of Completion License 1060-389295
 [] Seguridad en Sistemas Operativos
 [] Informática Forense
 
-## Data Analyst Path
+## Data Analyst Path
 [x] Data Analyst - SENA Associate Degree in Data Analyst
 [x] SQL Fundamentals
 SoloLearn Certificate of Completion Licencia 1059-389295
@@ -182,12 +187,12 @@ Noviembre de 2015
 [] Data Science in Python Thinkful
 [] Data Analyst Nanodegree Udacity
 
-## Big Data and Data Mining
+## Big Data and Data Mining
 [x] Codecademy Learn Java
 [] HADOOP
 [] Information Retrieval
 
-## Machine Learning Path
+## Machine Learning Path
 [] Machine Learning Engineer Nanodegree by Google Udacity
 [] Self-Driving Car Engineer Nanodegree Udacity
 [] Neural Nets
@@ -199,7 +204,8 @@ Noviembre de 2015
 [] Boosting
 [] Bagging
 [] Random Forests
-[] SVM & Kernel Methods
+[] SVM
+[] Kernel Methods
 [] LSI
 [] LDA
 [] Regression
@@ -209,19 +215,18 @@ Noviembre de 2015
 [] Ensemble Modeling
 [] Topic Modeling
 
-## High Perfomance Computing
+## High Perfomance Computing
 [] Computation Paralela
 [] Computación Distribuida
 [] Clustering
 
-## Front-end Path
+## Front-end Path
 [] Front-End Web Developer Nanodegree Udacity
+[] Senior Web Developer Nanodegree Udacity
 
 ## Back-end Path
 [] Full Stack Web Developer Nanodegree Udacity
-[] Senior Web Developer Nanodegree by Google Udacity
 [] Full Stack Web Developer Nanodegree Udacity
-[] Senior Web Developer Nanodegree Udacity
 
 ## DevOps Path
 [] DevOps Engineer Nanodegree Udacity
@@ -237,6 +242,7 @@ Noviembre de 2015
 [] Objective-C
 [] Beginning iOS App Development Nanodegree Udacity
 [] iOS Developer Nanodegree Udacity
+[] CS50X Harvard
 [] C
 [] C++
 [] CLP C Certified Professional Programmer
@@ -244,13 +250,13 @@ Noviembre de 2015
 [] Clang
 [] CMake
 
-## Operating Systems
+## Operating Systems
 [] Arquitectura de Computadores
 [] FreeBSD
 [] BSD Unix
 [] BSD Professional Certification
 
-## Programming Languages
+## Programming Languages
 
 [] Declarative Oriented Programming
   [] Flow Based Programming
@@ -261,17 +267,17 @@ Noviembre de 2015
   [] Automatic Programming
   [] Generative Programming
 
-## Computer Graphics
+## Computer Graphics
 [] Vulkan
 [] Procesamiento Digital de Imágenes
 
-## Robotics
+## Robotics
 [] KUKA Robot Operation 1
-[] KUKA Robot Operation PRO
+[] KUKA Robot Operation PRO
 [] KUKA Robot Programming 1
 [] KUKA Robot Programming 2
 
-## Body Training
+## Body Training
 [] Nin Do Kai
 [] Ninjutsu
 [] Honbu Dojo Japan
