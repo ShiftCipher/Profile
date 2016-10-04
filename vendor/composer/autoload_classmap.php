@@ -543,6 +543,7 @@ return array(
     'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => $vendorDir . '/sebastian/recursion-context/src/InvalidArgumentException.php',
     'SebastianBergmann\\ResourceOperations\\ResourceOperations' => $vendorDir . '/sebastian/resource-operations/src/ResourceOperations.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
+    'StudiesTableSeeder' => $baseDir . '/database/seeds/StudiesTableSeeder.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'UsersTableSeeder' => $baseDir . '/database/seeds/UsersTableSeeder.php',

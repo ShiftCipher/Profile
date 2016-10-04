@@ -20,6 +20,7 @@ class CreateStudiesTable extends Migration
             $table->string('photo')->nullable();
             $table->date('start')->nullable();
             $table->date('end')->nullable();
+            $table->string('url')->nullable();
             $table->boolean('complete');
             $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();

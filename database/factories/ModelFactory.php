@@ -70,3 +70,16 @@ $factory->define(App\Course::class, function (Faker\Generator $faker) {
     'photo' => "/img/courses/course.png",
   ];
 });
+
+$factory->define(App\Study::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'company' => $faker->name,
+    'complete' => true,
+    'url' => $faker->url,
+    'category_id' => 1,
+    'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'end' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'photo' => "/img/courses/course.png",
+  ];
+});

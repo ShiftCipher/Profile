@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
       $this->call(CertificatesTableSeeder::class);
       $this->call(ClientsTableSeeder::class);
       $this->call(CoursesTableSeeder::class);
+      $this->call(StudiesTableSeeder::class);
     }
 }
