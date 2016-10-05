@@ -11,18 +11,19 @@ class CreateCoursesTable extends Migration
      *
      * @return void
      */
-    
+
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('company')->nullable();
+            $table->text('description')->nullable();
             $table->date('start')->nullable();
             $table->date('end')->nullable();
             $table->string('url')->nullable();
-            $table->boolean('complete');
             $table->string('photo')->nullable();
+            $table->boolean('complete');
             $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();
         });

@@ -34,9 +34,9 @@
         <td>{{ $course->end }}</td>
         <td>
           @if ($course->complete == true)
-            True
-          @elseif ($course->complete == false)
-            False
+            <button class="btn btn-success" type="button">Complete</button>
+          @else
+            <button class="btn btn-danger" type="button">Incomplete</button>
           @endif
         </td>
         <td>{{ $course->url }}</td>

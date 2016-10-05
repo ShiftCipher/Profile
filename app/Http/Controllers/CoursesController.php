@@ -67,9 +67,9 @@ class CoursesController extends Controller
           $request->photo = '/img/courses/course.png';
         }
         $course = new Course;
-        if ($request->complete === true) {
+        if ($request->complete == true) {
           $course->complete = true;
-        } else {
+        } elseif ($request->complete == false) {
           $course->complete = false;
         }
         $course->name = $request->name;
@@ -135,9 +135,9 @@ class CoursesController extends Controller
       $course->company = $request->company;
       $course->start = $request->start;
       $course->end = $request->end;
-      if ($request->complete === true) {
+      if ($request->complete == true) {
         $course->complete = true;
-      } else {
+      } elseif ($request->complete == false) {
         $course->complete = false;
       }
       $course->url = $request->url;
@@ -164,13 +164,11 @@ class CoursesController extends Controller
     public function rules()
     {
       return [
-        'name' => 'string|required|max:255|unique:courses',
+        'name' => 'string|required|max:255',
         'company' => 'string|max:255',
-        'complete' => 'boolean',
-        'category_id' => 'integer|required',
-        'photo' => 'image|optional',
-        'end' => 'date',
         'start' => 'date',
+        'end' => 'date',
+        'photo' => 'image|optional',
         'url' => 'string',
       ];
     }

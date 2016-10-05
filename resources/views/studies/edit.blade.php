@@ -32,7 +32,8 @@
   {!! Form::file('photo', null, ['class' => 'form-control']) !!}
 
   {!! Form::label('Complete', trans('strings.complete')) !!}
-  {!! Form::checkbox('complete', 1, true, ['class' => 'field']) !!}
+  {!! Form::hidden('complete', false) !!}
+  {!! Form::checkbox('complete', true, $study->complete) !!}
 
   <br>
 

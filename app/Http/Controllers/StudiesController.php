@@ -67,9 +67,9 @@ class StudiesController extends Controller
           $request->photo = '/img/studies/study.png';
         }
         $study = new Study;
-        if ($request->complete === true) {
+        if ($request->complete == true) {
           $study->complete = true;
-        } else {
+        } elseif ($request->complete == false) {
           $study->complete = false;
         }
         $study->name = $request->name;
@@ -135,9 +135,9 @@ class StudiesController extends Controller
       $study->company = $request->company;
       $study->start = $request->start;
       $study->end = $request->end;
-      if ($request->complete === true) {
+      if ($request->complete == true) {
         $study->complete = true;
-      } else {
+      } elseif ($request->complete == false) {
         $study->complete = false;
       }
       $study->url = $request->url;
@@ -145,7 +145,7 @@ class StudiesController extends Controller
       $study->category_id = $request->category_id;
       $study->save();
       flash('Update Complete!', 'success');
-      return redirect('courses');
+      return redirect('studies');
     }
 
     /**
@@ -159,5 +159,18 @@ class StudiesController extends Controller
       Study::findOrFail($id)->delete();
       flash('Delete Complete!', 'success');
       return redirect('studies');
+    }
+
+    public function rules()
+    {
+      return [
+        'name' => 'string|required|max:255',
+        'photo' => 'image|optional',
+        'company' => 'string|required',
+        'complete' => 'boolean',
+        'end' => 'date',
+        'start' => 'date',
+        'url' => 'string',
+      ];
     }
 }

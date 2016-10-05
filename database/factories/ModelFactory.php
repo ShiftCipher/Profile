@@ -80,7 +80,7 @@ $factory->define(App\Study::class, function (Faker\Generator $faker) {
     'category_id' => 1,
     'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
     'end' => $faker->date($format = 'Y-m-d', $max = 'now'),
-    'photo' => "/img/courses/course.png",
+    'photo' => "/img/studies/study.png",
   ];
 });
 
@@ -89,5 +89,34 @@ $factory->define(App\Language::class, function (Faker\Generator $faker) {
     'name' => $faker->name,
     'level' => $faker->numberBetween($min = 40, $max = 99),
     'photo' => "/img/languages/language.png",
+  ];
+});
+
+$factory->define(App\Project::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'company' => $faker->name,
+    'complete' => false,
+    'url' => $faker->url,
+    'category_id' => 1,
+    'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'end' => $faker->date($format = 'Y-m-d', $max = 'now'),
+    'photo' => "/img/projects/project.png",
+  ];
+});
+
+$factory->define(App\Service::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'url' => $faker->url,
+    'photo' => "/img/services/service.png",
+  ];
+});
+
+$factory->define(App\Skill::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'level' => $faker->numberBetween($min = 40, $max = 99),
+    'photo' => "/img/skills/skill.png",
   ];
 });

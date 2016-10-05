@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
+use Intervention\Image\ImageManagerStatic as Image;
 
 use App\Http\Requests;
 
 use App\Project;
+use App\Category;
+use File;
 
 class ProjectsController extends Controller
 {
@@ -29,7 +34,8 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+      $categories = Category::pluck('name', 'id')->sortBy('name');
+      return view('projects.create', compact('categories'));
     }
 
     /**
@@ -40,7 +46,42 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $validator = Validator::make($request->all(), $this->rules());
+
+      if ($validator->fails()) {
+        flash('Validation Fail!', 'danger');
+        return redirect('projects/create')
+        ->withErrors($validator)
+        ->withInput();
+      } else {
+        $file = Input::file('photo');
+        if ($file)
+        {
+          $filePath = public_path() . '/img/projects/';
+          $fileName = $file->getClientOriginalName();
+          File::exists($filePath) or File::makeDirectory($filePath);
+          $image = Image::make($file->getRealPath());
+          $image->save($filePath . $fileName);
+          $request->photo = '/img/projects/' . $fileName;
+        } else {
+          $request->photo = '/img/projects/project.png';
+        }
+        $project = new Project;
+        if ($request->complete == true) {
+          $project->complete = true;
+        } elseif ($request->complete == false) {
+          $project->complete = false;
+        }
+        $project->name = $request->name;
+        $project->start = $request->start;
+        $project->end = $request->end;
+        $project->url = $request->url;
+        $project->photo = $request->photo;
+        $project->category_id = $request->category_id;
+        $project->save();
+        flash('Create Successful!', 'success');
+      }
+      return redirect('projects');
     }
 
     /**
@@ -51,7 +92,8 @@ class ProjectsController extends Controller
      */
     public function show($id)
     {
-        //
+      $project = Project::findOrFail($id);
+      return view('projects.show', compact('project'));
     }
 
     /**
@@ -62,7 +104,10 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        //
+      $project = Project::findOrFail($id);
+      $categories = Category::pluck('name', 'id')->sortBy('name');
+
+      return view('projects.edit', compact('project', 'categories'));
     }
 
     /**
@@ -74,7 +119,32 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $project = Project::findOrFail($id);
+
+      $validator = Validator::make($request->all(), $this->rules());
+      if ($validator->fails()) {
+        flash('Validation Fails!', 'danger');
+        return redirect('projects/' . $project->id . '/edit')
+          ->withErrors($validator)
+          ->withInput();
+      } else {
+        $request->photo = '/img/projects/project.png';
+      }
+      $project->name = $request->name;
+      $project->company = $request->company;
+      $project->start = $request->start;
+      $project->end = $request->end;
+      if ($request->complete == true) {
+        $project->complete = true;
+      } elseif ($request->complete == false) {
+        $project->complete = false;
+      }
+      $project->url = $request->url;
+      $project->photo = $request->photo;
+      $project->category_id = $request->category_id;
+      $project->save();
+      flash('Update Complete!', 'success');
+      return redirect('projects');
     }
 
     /**
@@ -88,5 +158,17 @@ class ProjectsController extends Controller
       Project::findOrFail($id)->delete();
       flash('Delete Complete!', 'success');
       return redirect('projects');
+    }
+
+    public function rules()
+    {
+      return [
+        'name' => 'string|required|max:255',
+        'company' => 'string|max:255',
+        'start' => 'date',
+        'end' => 'date',
+        'photo' => 'image|optional',
+        'url' => 'string',
+      ];
     }
 }

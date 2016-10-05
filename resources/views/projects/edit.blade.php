@@ -4,36 +4,36 @@
 
 <h1>{{trans('strings.edit')}}</h1>
 
-<p><a href="{{ url('courses') }}">{{trans('strings.courses')}}</a> / {{ $course->name }}</p>
+<p><a href="{{ url('projects') }}">{{trans('strings.projects')}}</a> / {{ $project->name }}</p>
 
-{!! Form::open(array('route' => array('courses.update', $course->id), 'files' => true, 'method' => 'PATCH')) !!}
+{!! Form::open(array('route' => array('projects.update', $project->id), 'files' => true, 'method' => 'PATCH')) !!}
 
   {!! Form::label('Category', trans('strings.category')) !!}
-  {!! Form::select('category_id', $categories, $course->category_id, ['class' => 'form-control']) !!}
+  {!! Form::select('category_id', $categories, $project->category_id, ['class' => 'form-control']) !!}
 
   <br>
 
   {!! Form::label('Name', trans('strings.name')) !!}
-  {!! Form::text('name', $course->name, ['class' => 'form-control']) !!}
+  {!! Form::text('name', $project->name, ['class' => 'form-control']) !!}
 
   {!! Form::label('Company', trans('strings.company')) !!}
-  {!! Form::text('company', $course->company, ['class' => 'form-control']) !!}
+  {!! Form::text('company', $project->company, ['class' => 'form-control']) !!}
 
   {!! Form::label('URL', trans('strings.url')) !!}
-  {!! Form::text('url', $course->url, ['class' => 'form-control']) !!}
+  {!! Form::text('url', $project->url, ['class' => 'form-control']) !!}
 
   {!! Form::label('Start', trans('strings.date')) !!}
-  {!! Form::date('start', $course->start, ['class' => 'form-control']) !!}
+  {!! Form::date('start', $project->start, ['class' => 'form-control']) !!}
 
   {!! Form::label('End', trans('strings.date')) !!}
-  {!! Form::date('end', $course->end, ['class' => 'form-control']) !!}
+  {!! Form::date('end', $project->end, ['class' => 'form-control']) !!}
 
   {!! Form::label('Photo', trans('strings.image')) !!}
   {!! Form::file('photo', null, ['class' => 'form-control']) !!}
 
   {!! Form::label('Complete', trans('strings.complete')) !!}
   {!! Form::hidden('complete', false) !!}
-  {!! Form::checkbox('complete', true, $course->complete) !!}
+  {!! Form::checkbox('complete', true, $project->complete) !!}
 
   <br>
 
