@@ -28,3 +28,4 @@ Route::resource('photos', 'PhotosController');
 Route::resource('projects', 'ProjectsController');
 Route::resource('services', 'ServicesController');
 Route::resource('skills', 'SkillsController');
+Route::resource('users', 'UsersController', ['only' => ['edit', 'update']]);

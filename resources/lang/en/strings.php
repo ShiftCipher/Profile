@@ -34,5 +34,9 @@ return [
 'level' => 'Level',
 'direction' => 'Direction',
 'project' => 'Project',
+'users' => 'Users',
+'email' => 'Email',
+'nickname' => 'Nickname',
+'profile' => 'Profile'
 
 ];
