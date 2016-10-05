@@ -4,6 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Certificate;
+use App\Client;
+use App\Course;
+use App\Language;
+use App\Photo;
+use App\Project;
+use App\Service;
+use App\Skill;
+use App\Study;
+
+use Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +35,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+      $certificates = Certificate::all()->sortBy('date');
+      $clients = Client::all()->sortBy('name');
+      $courses = Course::all()->sortBy('date');
+      $languages = Language::all()->sortBy('name');
+      $photos = Photo::all()->sortBy('create_at');
+      $projects = Project::all()->sortBy('end');
+      $services = Service::all()->sortBy('name');
+      $skills = Skill::all()->sortBy('name');
+      $studies = Study::all()->sortBy('end');
+      $user = Auth::user();
+
+      return view('home', compact(
+      'certificates', 'clients', 'courses', 'languages',
+      'photos', 'projects', 'services', 'skills',
+      'studies', 'user'
+      ));
     }
 }

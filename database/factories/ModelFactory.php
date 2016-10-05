@@ -62,7 +62,7 @@ $factory->define(App\Course::class, function (Faker\Generator $faker) {
   return [
     'name' => $faker->name,
     'company' => $faker->name,
-    'complete' => false,
+    'complete' => true,
     'url' => $faker->url,
     'category_id' => 1,
     'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
