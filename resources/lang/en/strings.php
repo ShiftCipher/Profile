@@ -31,5 +31,6 @@ return [
 'address' => 'Address',
 'category' => 'Category',
 'complete' => 'Complete',
+'level' => 'Level',
 
 ];

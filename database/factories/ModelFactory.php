@@ -83,3 +83,11 @@ $factory->define(App\Study::class, function (Faker\Generator $faker) {
     'photo' => "/img/courses/course.png",
   ];
 });
+
+$factory->define(App\Language::class, function (Faker\Generator $faker) {
+  return [
+    'name' => $faker->name,
+    'level' => $faker->numberBetween($min = 40, $max = 99),
+    'photo' => "/img/languages/language.png",
+  ];
+});
