@@ -32,5 +32,7 @@ return [
 'category' => 'Category',
 'complete' => 'Complete',
 'level' => 'Level',
+'direction' => 'Direction',
+'project' => 'Project',
 
 ];

@@ -120,3 +120,10 @@ $factory->define(App\Skill::class, function (Faker\Generator $faker) {
     'photo' => "/img/skills/skill.png",
   ];
 });
+
+$factory->define(App\Photo::class, function (Faker\Generator $faker) {
+  return [
+    'photo' => "/img/photos/photo.png",
+    'project_id' => 1,
+  ];
+});
