@@ -37,6 +37,7 @@ return [
 'users' => 'Users',
 'email' => 'Email',
 'nickname' => 'Nickname',
-'profile' => 'Profile'
+'profile' => 'Profile',
+'bio' => 'Bio',
 
 ];

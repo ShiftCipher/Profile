@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                  @include('layouts.menu')  
+                  @include('layouts.menu')
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -93,9 +93,9 @@
           </ul>
         </div>
       @endif
-
-      @yield('content')
     </div>
+
+    @yield('content')
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>

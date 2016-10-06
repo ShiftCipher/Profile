@@ -21,6 +21,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'address' => $faker->address,
         'telephone' => $faker->phoneNumber,
         'cellphone' => $faker->phoneNumber,
+        'bio' => $faker->text,
         'password' => $password ?: $password = bcrypt('123456'),
         'photo' => "/img/users/profile.png",
         'remember_token' => str_random(10),
@@ -95,7 +96,7 @@ $factory->define(App\Language::class, function (Faker\Generator $faker) {
 $factory->define(App\Project::class, function (Faker\Generator $faker) {
   return [
     'name' => $faker->name,
-    'company' => $faker->name,
+    'description' => $faker->text,
     'complete' => false,
     'url' => $faker->url,
     'category_id' => 1,

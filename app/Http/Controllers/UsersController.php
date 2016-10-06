@@ -50,6 +50,7 @@ class UsersController extends Controller
       $user->photo = $request->photo;
       $user->email = $request->email;
       $user->nickname = $request->nickname;
+      $user->bio = $request->bio;
       $user->address = $request->address;
       $user->telephone = $request->telephone;
       $user->cellphone = $request->cellphone;
@@ -68,6 +69,7 @@ class UsersController extends Controller
         'nickname' => 'string|max:255',
         'address' => 'string|max:255',
         'telephone' => 'string|max:20',
+        'bio' => 'string',
         'cellphone' => 'string|max:20',
       ];
     }

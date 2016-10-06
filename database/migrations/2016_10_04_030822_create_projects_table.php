@@ -16,7 +16,6 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('company')->nullable();
             $table->text('description')->nullable();
             $table->date('start')->nullable();
             $table->date('end')->nullable();

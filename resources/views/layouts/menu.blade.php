@@ -9,5 +9,5 @@
   <li><a href="{{ url('projects') }}">{{trans('strings.projects')}}</a></li>
   <li><a href="{{ url('services') }}">{{trans('strings.services')}}</a></li>
   <li><a href="{{ url('skills') }}">{{trans('strings.skills')}}</a></li>
-  <li><a href="{{ url('\'/users/' . Auth::id() . '/edit\'') }}">{{trans('strings.profile')}}</li>
+  <li><a href="{{ url('users/' . Auth::id() . '/edit') }}">{{trans('strings.profile')}}</li>
 @endif

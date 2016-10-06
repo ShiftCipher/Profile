@@ -17,6 +17,9 @@
   {!! Form::label('Nickname', trans('strings.nickname')) !!}
   {!! Form::text('nickname', $user->nickname, ['class' => 'form-control']) !!}
 
+  {!! Form::label('Bio', trans('strings.bio')) !!}
+  {!! Form::textarea('bio', $user->bio, ['class' => 'form-control']) !!}
+
   {!! Form::label('Address', trans('strings.address')) !!}
   {!! Form::text('address', $user->address, ['class' => 'form-control']) !!}
 
