@@ -39,5 +39,6 @@ return [
 'nickname' => 'Nickname',
 'profile' => 'Profile',
 'bio' => 'Bio',
+'profession' => 'Profession',
 
 ];

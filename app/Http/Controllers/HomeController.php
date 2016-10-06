@@ -41,7 +41,7 @@ class HomeController extends Controller
       $languages = Language::all()->sortBy('name');
       $photos = Photo::all()->sortBy('create_at');
       $projects = Project::all()->sortBy('end');
-      $services = Service::all()->sortBy('name');
+      $services = Service::all()->sortBy('id');
       $skills = Skill::all()->sortBy('name');
       $studies = Study::all()->sortBy('end');
       $user = Auth::user();

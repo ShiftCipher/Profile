@@ -20,6 +20,9 @@
   {!! Form::label('Bio', trans('strings.bio')) !!}
   {!! Form::textarea('bio', $user->bio, ['class' => 'form-control']) !!}
 
+  {!! Form::label('Profession', trans('strings.profession')) !!}
+  {!! Form::text('profession', $user->profession, ['class' => 'form-control']) !!}
+
   {!! Form::label('Address', trans('strings.address')) !!}
   {!! Form::text('address', $user->address, ['class' => 'form-control']) !!}
 

@@ -31,7 +31,7 @@
     @foreach ($photos as $photo)
       <tr>
         <td>{{ $photo->id }}</td>
-        <td>{{ $photo->project_id }}</td>
+        <td>{{ $photo->project->name }}</td>
         <td><img src="{{ $photo->photo }}" alt="{{ $photo->photo }}" style="weight:150px; height:150px;"/></td>
         <td><a href="/photos/{{ $photo->id }}">{{ $photo->photo or 'Blank' }}</a></td>
         <td>

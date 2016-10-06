@@ -20,6 +20,7 @@ class CreateProjectsTable extends Migration
             $table->date('start')->nullable();
             $table->date('end')->nullable();
             $table->string('url')->nullable();
+            $table->string('company')->nullable();
             $table->string('photo')->nullable();
             $table->boolean('complete');
             $table->integer('category_id')->unsigned()->nullable();

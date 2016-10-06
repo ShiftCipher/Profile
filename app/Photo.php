@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Photo extends Model
 {
-  public function project($value='')
+  public function project()
   {
-    # code...
+    return $this->belongsTo(Project::class);
   }
 }

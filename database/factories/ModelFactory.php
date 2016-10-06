@@ -22,6 +22,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'telephone' => $faker->phoneNumber,
         'cellphone' => $faker->phoneNumber,
         'bio' => $faker->text,
+        'profession' => $faker->name,
         'password' => $password ?: $password = bcrypt('123456'),
         'photo' => "/img/users/profile.png",
         'remember_token' => str_random(10),
@@ -88,7 +89,7 @@ $factory->define(App\Study::class, function (Faker\Generator $faker) {
 $factory->define(App\Language::class, function (Faker\Generator $faker) {
   return [
     'name' => $faker->name,
-    'level' => $faker->numberBetween($min = 40, $max = 99),
+    'level' => 'B1',
     'photo' => "/img/languages/language.png",
   ];
 });
@@ -99,6 +100,7 @@ $factory->define(App\Project::class, function (Faker\Generator $faker) {
     'description' => $faker->text,
     'complete' => false,
     'url' => $faker->url,
+    'company' => $faker->name,
     'category_id' => 1,
     'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
     'end' => $faker->date($format = 'Y-m-d', $max = 'now'),
@@ -125,6 +127,6 @@ $factory->define(App\Skill::class, function (Faker\Generator $faker) {
 $factory->define(App\Photo::class, function (Faker\Generator $faker) {
   return [
     'photo' => "/img/photos/photo.png",
-    'project_id' => 1,
+    'project_id' => $faker->numberBetween($min = 1, $max = 10),
   ];
 });

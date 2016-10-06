@@ -54,6 +54,7 @@ class UsersController extends Controller
       $user->address = $request->address;
       $user->telephone = $request->telephone;
       $user->cellphone = $request->cellphone;
+      $user->profession = $request->profession;
       $user->save();
 
       Flash('Update Complete!', 'success');
@@ -70,6 +71,7 @@ class UsersController extends Controller
         'address' => 'string|max:255',
         'telephone' => 'string|max:20',
         'bio' => 'string',
+        'profession' => 'string',
         'cellphone' => 'string|max:20',
       ];
     }

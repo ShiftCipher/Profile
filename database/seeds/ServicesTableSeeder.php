@@ -12,13 +12,8 @@ class ServicesTableSeeder extends Seeder
     public function run()
     {
       factory(App\Service::class)->create([
-        'name' => 'Facebook',
-        'url' => 'https://www.facebook.com/warindustries'
-      ]);
-
-      factory(App\Service::class)->create([
-        'name' => 'Twitter',
-        'url' => 'https://twitter.com/codeapps1'
+        'name' => 'Website',
+        'url' => 'https://www.codeapps.co'
       ]);
 
       factory(App\Service::class)->create([
@@ -30,5 +25,11 @@ class ServicesTableSeeder extends Seeder
         'name' => 'LinkedIn',
         'url' => 'https://co.linkedin.com/in/danieltarazona'
       ]);
+
+      factory(App\Service::class)->create([
+        'name' => 'Twitter',
+        'url' => 'https://twitter.com/codeapps1'
+      ]);
+
     }
 }

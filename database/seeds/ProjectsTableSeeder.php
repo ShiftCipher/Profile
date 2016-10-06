@@ -11,6 +11,15 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-      factory(App\Project::class, 10)->create();
+      factory(App\Project::class)->create([
+        'name' => 'Noir Bureau',
+        'description' => 'Blender Cycles Render Blackmagic Office',
+        'start' => '2013-06-20',
+        'end' => '2013-06-27',
+        'url' => 'https://realinterior.co',
+        'company' => 'RealInterior',
+        'category_id' => 1
+      ]);
+
     }
 }

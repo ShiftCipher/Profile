@@ -11,13 +11,13 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
+      factory(App\Category::class)->create(['name' => 'Architecture']);
       factory(App\Category::class)->create(['name' => 'UIX']);
       factory(App\Category::class)->create(['name' => 'Front-end']);
       factory(App\Category::class)->create(['name' => 'Machine Learning']);
       factory(App\Category::class)->create(['name' => 'Back-end']);
       factory(App\Category::class)->create(['name' => 'JavaScript']);
       factory(App\Category::class)->create(['name' => 'PHP']);
-      factory(App\Category::class)->create(['name' => 'Architecture']);
       factory(App\Category::class)->create(['name' => 'Games']);
       factory(App\Category::class)->create(['name' => 'Mathematics']);
       factory(App\Category::class)->create(['name' => 'Computer Science']);

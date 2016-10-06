@@ -76,6 +76,7 @@ class ProjectsController extends Controller
         $project->start = $request->start;
         $project->end = $request->end;
         $project->url = $request->url;
+        $project->company = $request->company;
         $project->photo = $request->photo;
         $project->category_id = $request->category_id;
         $project->save();
@@ -128,20 +129,33 @@ class ProjectsController extends Controller
           ->withErrors($validator)
           ->withInput();
       } else {
-        $request->photo = '/img/projects/project.png';
+        $file = Input::file('photo');
+        if ($file)
+        {
+          $filePath = public_path() . '/img/projects/';
+          $fileName = $file->getClientOriginalName();
+          File::exists($filePath) or File::makeDirectory($filePath);
+          $image = Image::make($file->getRealPath());
+          $image->save($filePath . $fileName);
+          $request->photo = '/img/projects/' . $fileName;
+        } else {
+          $request->photo = '/img/projects/project.png';
+        }
       }
       $project->name = $request->name;
       $project->company = $request->company;
       $project->start = $request->start;
       $project->end = $request->end;
+      $project->url = $request->url;
+      $project->photo = $request->photo;
+      $project->category_id = $request->category_id;
+
       if ($request->complete == true) {
         $project->complete = true;
       } elseif ($request->complete == false) {
         $project->complete = false;
       }
-      $project->url = $request->url;
-      $project->photo = $request->photo;
-      $project->category_id = $request->category_id;
+
       $project->save();
       flash('Update Complete!', 'success');
       return redirect('projects');
@@ -167,7 +181,8 @@ class ProjectsController extends Controller
         'company' => 'string|max:255',
         'start' => 'date',
         'end' => 'date',
-        'photo' => 'image|optional',
+        'company' => 'string',
+        'photo' => 'image',
         'url' => 'string',
       ];
     }
