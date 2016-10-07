@@ -1,6 +1,6 @@
 # Profile Generator
 
-Profile is a web application elegant. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Profile is a elegant web application to generate curriculum vitae from Laravel Administration Panel. 
 
 ## Official Documentation
 
