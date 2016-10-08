@@ -49,7 +49,7 @@ class StudiesController extends Controller
       $validator = Validator::make($request->all(), $this->rules());
 
       if ($validator->fails()) {
-        flash('Validation Fail!', 'danger');
+        Flash('Validation Fail!', 'danger');
         return redirect('studies/create')
         ->withErrors($validator)
         ->withInput();
@@ -66,21 +66,25 @@ class StudiesController extends Controller
         } else {
           $request->photo = '/img/studies/study.png';
         }
+
         $study = new Study;
-        if ($request->complete == true) {
-          $study->complete = true;
-        } elseif ($request->complete == false) {
-          $study->complete = false;
-        }
         $study->name = $request->name;
         $study->company = $request->company;
+        $study->description = $request->description;
         $study->start = $request->start;
         $study->end = $request->end;
         $study->url = $request->url;
         $study->photo = $request->photo;
         $study->category_id = $request->category_id;
+
+        if ($request->complete == true) {
+          $study->complete = true;
+        } elseif ($request->complete == false) {
+          $study->complete = false;
+        }
+
         $study->save();
-        flash('Create Successful!', 'success');
+        Flash('Create Successful!', 'success');
       }
       return redirect('studies');
     }
@@ -124,27 +128,31 @@ class StudiesController extends Controller
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
-        flash('Validation Fails!', 'danger');
+        Flash('Validation Fails!', 'danger');
         return redirect('studies/' . $study->id . '/edit')
           ->withErrors($validator)
           ->withInput();
       } else {
         $request->photo = '/img/studies/study.png';
       }
+
       $study->name = $request->name;
       $study->company = $request->company;
+      $study->description = $request->description;
       $study->start = $request->start;
       $study->end = $request->end;
+      $study->url = $request->url;
+      $study->photo = $request->photo;
+      $study->category_id = $request->category_id;
+
       if ($request->complete == true) {
         $study->complete = true;
       } elseif ($request->complete == false) {
         $study->complete = false;
       }
-      $study->url = $request->url;
-      $study->photo = $request->photo;
-      $study->category_id = $request->category_id;
+
       $study->save();
-      flash('Update Complete!', 'success');
+      Flash('Update Complete!', 'success');
       return redirect('studies');
     }
 
@@ -157,7 +165,7 @@ class StudiesController extends Controller
     public function destroy($id)
     {
       Study::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('studies');
     }
 
@@ -171,6 +179,7 @@ class StudiesController extends Controller
         'end' => 'date',
         'start' => 'date',
         'url' => 'string',
+        'description' => 'string'
       ];
     }
 }

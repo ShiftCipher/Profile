@@ -2,13 +2,16 @@
 
 @section('content')
 
-<br>
-<h1><a href="skills">{{ $skill->name }}</a> / {{ trans('strings.courses') }}</h1>
+  <div class="container">
 
-<hr>
+    <h1><a href="skills">{{ $skill->name }}</a> / {{ trans('strings.courses') }}</h1>
 
-<table class="table">
+    <hr>
 
-</table>
+    <table class="table">
+
+    </table>
+
+  </div>
 
 @stop

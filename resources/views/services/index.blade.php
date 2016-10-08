@@ -2,6 +2,8 @@
 
 @section('content')
 
+  <div class="container">
+
   <h1>{{trans('strings.services')}}</h1>
 
   <a href="{{ route('services.create') }}" class="btn btn-primary">{{trans('strings.create')}}</a>
@@ -21,7 +23,7 @@
     @foreach ($services as $service)
       <tr>
         <td>{{ $service->id }}</td>
-        <td><img src="{{ $service->photo }}" alt="{{ $service->name }}" style="weight:50px; height:50px;"/></td>
+        <td><span class="{{ $service->icon }}"></span></td>
         <td><a href="/services/{{ $service->id }}">{{ $service->name or 'Blank' }}</a></td>
         <td>{{ $service->url }}</td>
         <td>
@@ -37,5 +39,7 @@
     @endforeach
 
   </table>
+
+  </div>
 
 @endsection

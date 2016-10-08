@@ -49,7 +49,7 @@ class ProjectsController extends Controller
       $validator = Validator::make($request->all(), $this->rules());
 
       if ($validator->fails()) {
-        flash('Validation Fail!', 'danger');
+        Flash('Validation Fail!', 'danger');
         return redirect('projects/create')
         ->withErrors($validator)
         ->withInput();
@@ -80,7 +80,7 @@ class ProjectsController extends Controller
         $project->photo = $request->photo;
         $project->category_id = $request->category_id;
         $project->save();
-        flash('Create Successful!', 'success');
+        Flash('Create Successful!', 'success');
       }
       return redirect('projects');
     }
@@ -124,7 +124,7 @@ class ProjectsController extends Controller
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
-        flash('Validation Fails!', 'danger');
+        Flash('Validation Fails!', 'danger');
         return redirect('projects/' . $project->id . '/edit')
           ->withErrors($validator)
           ->withInput();
@@ -157,7 +157,7 @@ class ProjectsController extends Controller
       }
 
       $project->save();
-      flash('Update Complete!', 'success');
+      Flash('Update Complete!', 'success');
       return redirect('projects');
     }
 
@@ -170,7 +170,7 @@ class ProjectsController extends Controller
     public function destroy($id)
     {
       Project::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('projects');
     }
 

@@ -15,6 +15,9 @@ class UsersTableSeeder extends Seeder
         'name' => 'Daniel Tarazona',
         'nickname' => 'xYz',
         'email' => 'admin@admin.com',
+        'profession' => 'Architect, Hacker, Ninja',
+        'telephone' => '+57 315 8375156',
+        'cellphone' => '+57 315 8375156',
         'password' => bcrypt("123456")
       ]);
     }

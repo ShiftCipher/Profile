@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="container">
   <h1>{{trans('strings.certificates')}}</h1>
 
   <a href="{{ route('certificates.create') }}" class="btn btn-primary">{{trans('strings.create')}}</a>
@@ -43,5 +44,7 @@
     @endforeach
 
   </table>
+
+  </div>
 
 @endsection

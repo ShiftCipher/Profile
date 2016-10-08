@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="container">
 <h1>{{trans('strings.edit')}}</h1>
 
 <p><a href="{{ url('certificates') }}">{{trans('strings.certificates')}}</a> / {{ $certificate->name }}</p>
@@ -31,5 +32,7 @@
   {{ Form::submit('Update', array('class' => 'btn btn-success')) }}
 
 {!! Form::close() !!}
+
+</div>
 
 @stop

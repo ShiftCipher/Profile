@@ -19,6 +19,9 @@
   {!! Form::label('Company', trans('strings.company')) !!}
   {!! Form::text('company', $course->company, ['class' => 'form-control']) !!}
 
+  {!! Form::label('Description', trans('strings.description')) !!}
+  {!! Form::textarea('description', $course->description, ['class' => 'form-control']) !!}
+
   {!! Form::label('URL', trans('strings.url')) !!}
   {!! Form::text('url', $course->url, ['class' => 'form-control']) !!}
 

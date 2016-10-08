@@ -47,30 +47,18 @@ class ServicesController extends Controller
       $validator = Validator::make($request->all(), $this->rules());
 
       if ($validator->fails()) {
-        flash('Validation Fail!', 'danger');
+        Flash('Validation Fail!', 'danger');
         return redirect('services/create')
         ->withErrors($validator)
         ->withInput();
-      } else {
-        $file = Input::file('photo');
-        if ($file)
-        {
-          $filePath = public_path() . '/img/services/';
-          $fileName = $file->getClientOriginalName();
-          File::exists($filePath) or File::makeDirectory($filePath);
-          $image = Image::make($file->getRealPath());
-          $image->save($filePath . $fileName);
-          $request->photo = '/img/services/' . $fileName;
-        } else {
-          $request->photo = '/img/services/service.png';
-        }
-        $service = new Service;
-        $service->name = $request->name;
-        $service->url = $request->url;
-        $service->photo = $request->photo;
-        $service->save();
-        flash('Create Successful!', 'success');
       }
+      $service = new Service;
+      $service->name = $request->name;
+      $service->url = $request->url;
+      $service->icon = $request->icon;
+      $service->user = $request->user;
+      $service->save();
+      Flash('Create Successful!', 'success');
       return redirect('services');
     }
 
@@ -115,12 +103,11 @@ class ServicesController extends Controller
         return redirect('services/' . $service->id . '/edit')
           ->withErrors($validator)
           ->withInput();
-      } else {
-        $request->photo = '/img/services/service.png';
       }
       $service->name = $request->name;
       $service->url = $request->url;
-      $service->photo = $request->photo;
+      $service->icon = $request->icon;
+      $service->user = $request->user;
       $service->save();
 
       Flash('Update Complete!', 'success');
@@ -136,7 +123,7 @@ class ServicesController extends Controller
     public function destroy($id)
     {
       Service::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('services');
     }
 
@@ -144,8 +131,9 @@ class ServicesController extends Controller
     {
       return [
         'name' => 'string|required|max:255',
-        'photo' => 'image|optional',
-        'url' => 'string',
+        'icon' => 'string|required',
+        'url' => 'string|required',
+        'user' => 'string|required'
       ];
     }
 }

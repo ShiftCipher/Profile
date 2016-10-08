@@ -37,7 +37,7 @@ class HomeController extends Controller
     {
       $certificates = Certificate::all()->sortBy('date');
       $clients = Client::all()->sortBy('name');
-      $courses = Course::all()->sortBy('date');
+      $courses = Course::all();
       $languages = Language::all()->sortBy('name');
       $photos = Photo::all()->sortBy('create_at');
       $projects = Project::all()->sortBy('end');

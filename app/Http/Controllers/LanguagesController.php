@@ -114,7 +114,7 @@ class LanguagesController extends Controller
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
-        flash('Validation Fails!', 'danger');
+        Flash('Validation Fails!', 'danger');
         return redirect('languages/' . $language->id . '/edit')
           ->withErrors($validator)
           ->withInput();
@@ -125,7 +125,7 @@ class LanguagesController extends Controller
       $language->photo = $request->photo;
       $language->level = $request->level;
       $language->save();
-      flash('Update Complete!', 'success');
+      Flash('Update Complete!', 'success');
       return redirect('languages');
     }
 
@@ -138,7 +138,7 @@ class LanguagesController extends Controller
     public function destroy($id)
     {
       Language::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('languages');
     }
 

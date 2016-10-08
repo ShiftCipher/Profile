@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="container">
 {!! Form::open(['route' => 'certificates.store', 'files' => true, 'method' => 'POST']) !!}
 
   {!! Form::label('Name', trans('strings.name')) !!}
@@ -25,5 +26,7 @@
   {{ Form::submit('Create', array('class' => 'btn btn-success'))}}
 
 {!! Form::close() !!}
+
+</div>
 
 @stop

@@ -2,25 +2,29 @@
 
 @section('content')
 
-<h1>{{trans('strings.edit')}}</h1>
+  <div class="container">
 
-<p><a href="{{ url('skills') }}">{{trans('strings.skills')}}</a> / {{ $skill->name }}</p>
+    <h1>{{trans('strings.edit')}}</h1>
 
-{!! Form::open(array('route' => array('skills.update', $skill->id), 'files' => true, 'method' => 'PATCH')) !!}
+    <p><a href="{{ url('skills') }}">{{trans('strings.skills')}}</a> / {{ $skill->name }}</p>
 
-  {!! Form::label('Name', trans('strings.name')) !!}
-  {!! Form::text('name', $skill->name, ['class' => 'form-control']) !!}
+    {!! Form::open(array('route' => array('skills.update', $skill->id), 'files' => true, 'method' => 'PATCH')) !!}
 
-  {!! Form::label('Level', trans('strings.level')) !!}
-  {!! Form::number('level', $skill->level, ['class' => 'form-control']) !!}
+    {!! Form::label('Name', trans('strings.name')) !!}
+    {!! Form::text('name', $skill->name, ['class' => 'form-control']) !!}
 
-  {!! Form::label('Photo', trans('strings.image')) !!}
-  {!! Form::file('photo', null, ['class' => 'form-control']) !!}
+    {!! Form::label('Level', trans('strings.level')) !!}
+    {!! Form::number('level', $skill->level, ['class' => 'form-control']) !!}
 
-  <br>
+    {!! Form::label('Photo', trans('strings.image')) !!}
+    {!! Form::file('photo', null, ['class' => 'form-control']) !!}
 
-  {{ Form::submit('Update', array('class' => 'btn btn-success')) }}
+    <br>
 
-{!! Form::close() !!}
+    {{ Form::submit('Update', array('class' => 'btn btn-success')) }}
+
+    {!! Form::close() !!}
+
+  </div>
 
 @stop

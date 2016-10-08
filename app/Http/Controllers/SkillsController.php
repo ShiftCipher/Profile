@@ -112,7 +112,7 @@ class SkillsController extends Controller
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
-        flash('Validation Fails!', 'danger');
+        Flash('Validation Fails!', 'danger');
         return redirect('skills/' . $skill->id . '/edit')
           ->withErrors($validator)
           ->withInput();
@@ -123,7 +123,7 @@ class SkillsController extends Controller
       $skill->photo = $request->photo;
       $skill->level = $request->level;
       $skill->save();
-      flash('Update Complete!', 'success');
+      Flash('Update Complete!', 'success');
       return redirect('skills');
     }
 
@@ -136,7 +136,7 @@ class SkillsController extends Controller
     public function destroy($id)
     {
       Skill::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('skills');
     }
 

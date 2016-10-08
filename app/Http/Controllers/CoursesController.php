@@ -49,7 +49,7 @@ class CoursesController extends Controller
       $validator = Validator::make($request->all(), $this->rules());
 
       if ($validator->fails()) {
-        flash('Validation Fail!', 'danger');
+        Flash('Validation Fail!', 'danger');
         return redirect('courses/create')
         ->withErrors($validator)
         ->withInput();
@@ -67,11 +67,7 @@ class CoursesController extends Controller
           $request->photo = '/img/courses/course.png';
         }
         $course = new Course;
-        if ($request->complete == true) {
-          $course->complete = true;
-        } elseif ($request->complete == false) {
-          $course->complete = false;
-        }
+        $course->description = $request->description;
         $course->name = $request->name;
         $course->company = $request->company;
         $course->start = $request->start;
@@ -79,8 +75,13 @@ class CoursesController extends Controller
         $course->url = $request->url;
         $course->photo = $request->photo;
         $course->category_id = $request->category_id;
+        if ($request->complete == true) {
+          $course->complete = true;
+        } elseif ($request->complete == false) {
+          $course->complete = false;
+        }
         $course->save();
-        flash('Create Successful!', 'success');
+        Flash('Create Successful!', 'success');
       }
       return redirect('courses');
     }
@@ -124,7 +125,7 @@ class CoursesController extends Controller
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
-        flash('Validation Fails!', 'danger');
+        Flash('Validation Fails!', 'danger');
         return redirect('courses/' . $course->id . '/edit')
           ->withErrors($validator)
           ->withInput();
@@ -135,16 +136,17 @@ class CoursesController extends Controller
       $course->company = $request->company;
       $course->start = $request->start;
       $course->end = $request->end;
+      $course->url = $request->url;
+      $course->description = $request->description;
+      $course->photo = $request->photo;
+      $course->category_id = $request->category_id;
       if ($request->complete == true) {
         $course->complete = true;
       } elseif ($request->complete == false) {
         $course->complete = false;
       }
-      $course->url = $request->url;
-      $course->photo = $request->photo;
-      $course->category_id = $request->category_id;
       $course->save();
-      flash('Update Complete!', 'success');
+      Flash('Update Complete!', 'success');
       return redirect('courses');
     }
 
@@ -157,7 +159,7 @@ class CoursesController extends Controller
     public function destroy($id)
     {
       Course::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('courses');
     }
 
@@ -170,6 +172,7 @@ class CoursesController extends Controller
         'end' => 'date',
         'photo' => 'image|optional',
         'url' => 'string',
+        'description' => 'string'
       ];
     }
 

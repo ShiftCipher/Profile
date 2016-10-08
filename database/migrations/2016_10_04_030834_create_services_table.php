@@ -6,29 +6,30 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateServicesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-      Schema::create('services', function (Blueprint $table) {
-          $table->increments('id');
-          $table->string('name');
-          $table->string('url');
-          $table->string('photo')->nullable();
-          $table->timestamps();
-      });
-    }
+  /**
+  * Run the migrations.
+  *
+  * @return void
+  */
+  public function up()
+  {
+    Schema::create('services', function (Blueprint $table) {
+      $table->increments('id');
+      $table->string('name');
+      $table->string('user');
+      $table->string('url');
+      $table->string('icon')->nullable();
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('services');
-    }
+  /**
+  * Reverse the migrations.
+  *
+  * @return void
+  */
+  public function down()
+  {
+    Schema::dropIfExists('services');
+  }
 }

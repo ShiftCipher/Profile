@@ -1,4 +1,4 @@
-<?php
+`<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -12,21 +12,21 @@
 */
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
+  static $password;
 
-    return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'nickname' => $faker->name,
-        'address' => $faker->address,
-        'telephone' => $faker->phoneNumber,
-        'cellphone' => $faker->phoneNumber,
-        'bio' => $faker->text,
-        'profession' => $faker->name,
-        'password' => $password ?: $password = bcrypt('123456'),
-        'photo' => "/img/users/profile.png",
-        'remember_token' => str_random(10),
-    ];
+  return [
+    'name' => $faker->name,
+    'email' => $faker->unique()->safeEmail,
+    'nickname' => $faker->name,
+    'address' => $faker->address,
+    'telephone' => $faker->phoneNumber,
+    'cellphone' => $faker->phoneNumber,
+    'bio' => $faker->text,
+    'profession' => $faker->name,
+    'password' => $password ?: $password = bcrypt('123456'),
+    'photo' => "/img/users/profile.png",
+    'remember_token' => str_random(10),
+  ];
 });
 
 $factory->define(App\Category::class, function (Faker\Generator $faker) {
@@ -66,6 +66,7 @@ $factory->define(App\Course::class, function (Faker\Generator $faker) {
     'company' => $faker->name,
     'complete' => true,
     'url' => $faker->url,
+    'description' => $faker->text,
     'category_id' => 1,
     'start' => $faker->date($format = 'Y-m-d', $max = 'now'),
     'end' => $faker->date($format = 'Y-m-d', $max = 'now'),
@@ -77,6 +78,7 @@ $factory->define(App\Study::class, function (Faker\Generator $faker) {
   return [
     'name' => $faker->name,
     'company' => $faker->name,
+    'description' => $faker->text,
     'complete' => true,
     'url' => $faker->url,
     'category_id' => 1,
@@ -112,7 +114,8 @@ $factory->define(App\Service::class, function (Faker\Generator $faker) {
   return [
     'name' => $faker->name,
     'url' => $faker->url,
-    'photo' => "/img/services/service.png",
+    'user' => $faker->name,
+    'icon' => "fa fa-paper-plane icon-lg icon-white",
   ];
 });
 
@@ -127,6 +130,6 @@ $factory->define(App\Skill::class, function (Faker\Generator $faker) {
 $factory->define(App\Photo::class, function (Faker\Generator $faker) {
   return [
     'photo' => "/img/photos/photo.png",
-    'project_id' => $faker->numberBetween($min = 1, $max = 10),
+    'project_id' => $faker->numberBetween($min = 1, $max = 2),
   ];
 });

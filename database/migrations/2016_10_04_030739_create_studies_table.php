@@ -18,6 +18,7 @@ class CreateStudiesTable extends Migration
             $table->string('name');
             $table->string('company')->nullable();
             $table->string('photo')->nullable();
+            $table->text('description')->nullable();
             $table->date('start')->nullable();
             $table->date('end')->nullable();
             $table->string('url')->nullable();

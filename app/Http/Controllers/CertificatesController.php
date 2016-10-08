@@ -47,7 +47,7 @@ class CertificatesController extends Controller
       $validator = Validator::make($request->all(), $this->rules());
 
       if ($validator->fails()) {
-        flash('Validation Fail!', 'danger');
+        Flash('Validation Fail!', 'danger');
         return redirect('certificates/create')
         ->withErrors($validator)
         ->withInput();
@@ -72,7 +72,7 @@ class CertificatesController extends Controller
         $certificate->company = $request->company;
         $certificate->photo = $request->photo;
         $certificate->save();
-        flash('Create Successful!', 'success');
+        Flash('Create Successful!', 'success');
       }
       return redirect('certificates');
     }
@@ -114,7 +114,7 @@ class CertificatesController extends Controller
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
-        flash('Validation Fails!', 'danger');
+        Flash('Validation Fails!', 'danger');
         return redirect('certificates/' . $certificate->id . '/edit')
           ->withErrors($validator)
           ->withInput();
@@ -128,7 +128,7 @@ class CertificatesController extends Controller
       $certificate->company = $request->company;
       $certificate->photo = $request->photo;
       $certificate->save();
-      flash('Update Complete!', 'success');
+      Flash('Update Complete!', 'success');
       return redirect('certificates');
     }
 
@@ -141,7 +141,7 @@ class CertificatesController extends Controller
     public function destroy($id)
     {
       Certificate::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('certificates');
     }
 

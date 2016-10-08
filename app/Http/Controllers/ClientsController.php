@@ -47,7 +47,7 @@ class ClientsController extends Controller
       $validator = Validator::make($request->all(), $this->rules());
 
       if ($validator->fails()) {
-        flash('Validation Fail!', 'danger');
+        Flash('Validation Fail!', 'danger');
         return redirect('clients/create')
         ->withErrors($validator)
         ->withInput();
@@ -74,7 +74,7 @@ class ClientsController extends Controller
         $client->end = $request->end;
         $client->photo = $request->photo;
         $client->save();
-        flash('Create Successful!', 'success');
+        Flash('Create Successful!', 'success');
       }
       return redirect('clients');
     }
@@ -116,7 +116,7 @@ class ClientsController extends Controller
 
       $validator = Validator::make($request->all(), $this->rules());
       if ($validator->fails()) {
-        flash('Validation Fails!', 'danger');
+        Flash('Validation Fails!', 'danger');
         return redirect('clients/' . $client->id . '/edit')
           ->withErrors($validator)
           ->withInput();
@@ -132,7 +132,7 @@ class ClientsController extends Controller
       $client->end = $request->end;
       $client->photo = $request->photo;
       $client->save();
-      flash('Update Complete!', 'success');
+      Flash('Update Complete!', 'success');
       return redirect('clients');
     }
 
@@ -145,7 +145,7 @@ class ClientsController extends Controller
     public function destroy($id)
     {
       Client::findOrFail($id)->delete();
-      flash('Delete Complete!', 'success');
+      Flash('Delete Complete!', 'success');
       return redirect('clients');
     }
 

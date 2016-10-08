@@ -2,25 +2,29 @@
 
 @section('content')
 
-<h1>{{trans('strings.edit')}}</h1>
+  <div class="container">
 
-<p><a href="{{ url('services') }}">{{trans('strings.services')}}</a> / {{ $service->name }}</p>
+    <h1>{{trans('strings.edit')}}</h1>
 
-{!! Form::open(array('route' => array('services.update', $service->id), 'files' => true, 'method' => 'PATCH')) !!}
+    <p><a href="{{ url('services') }}">{{trans('strings.services')}}</a> / {{ $service->name }}</p>
 
-  {!! Form::label('Name', trans('strings.name')) !!}
-  {!! Form::text('name', $service->name, ['class' => 'form-control']) !!}
+    {!! Form::open(array('route' => array('services.update', $service->id), 'files' => true, 'method' => 'PATCH')) !!}
 
-
-  {!! Form::label('URL', trans('strings.url')) !!}
-  {!! Form::text('url', $service->url, ['class' => 'form-control']) !!}
+    {!! Form::label('Name', trans('strings.name')) !!}
+    {!! Form::text('name', $service->name, ['class' => 'form-control']) !!}
 
 
-  {!! Form::label('Photo', trans('strings.image')) !!}
-  {!! Form::file('photo', null, ['class' => 'form-control']) !!}
+    {!! Form::label('URL', trans('strings.url')) !!}
+    {!! Form::text('url', $service->url, ['class' => 'form-control']) !!}
 
-  {{ Form::submit('Update', array('class' => 'btn btn-success'))}}
 
-{!! Form::close() !!}
+    {!! Form::label('Icon', trans('strings.icon')) !!}
+    {!! Form::text('icon', $service->icon, ['class' => 'form-control']) !!}
+
+    {{ Form::submit('Update', array('class' => 'btn btn-success'))}}
+
+    {!! Form::close() !!}
+
+  </div>
 
 @stop

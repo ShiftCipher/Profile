@@ -2,43 +2,50 @@
 
 @section('content')
 
-<h1>{{trans('strings.edit')}}</h1>
+  <div class="container">
 
-<p><a href="{{ url('studies') }}">{{trans('strings.studies')}}</a> / {{ $study->name }}</p>
+    <h1>{{trans('strings.edit')}}</h1>
 
-{!! Form::open(array('route' => array('studies.update', $study->id), 'files' => true, 'method' => 'PATCH')) !!}
+    <p><a href="{{ url('studies') }}">{{trans('strings.studies')}}</a> / {{ $study->name }}</p>
 
-  {!! Form::label('Category', trans('strings.category')) !!}
-  {!! Form::select('category_id', $categories, $study->category_id, ['class' => 'form-control']) !!}
+    {!! Form::open(array('route' => array('studies.update', $study->id), 'files' => true, 'method' => 'PATCH')) !!}
 
-  <br>
+    {!! Form::label('Category', trans('strings.category')) !!}
+    {!! Form::select('category_id', $categories, $study->category_id, ['class' => 'form-control']) !!}
 
-  {!! Form::label('Name', trans('strings.name')) !!}
-  {!! Form::text('name', $study->name, ['class' => 'form-control']) !!}
+    <br>
 
-  {!! Form::label('Company', trans('strings.company')) !!}
-  {!! Form::text('company', $study->company, ['class' => 'form-control']) !!}
+    {!! Form::label('Name', trans('strings.name')) !!}
+    {!! Form::text('name', $study->name, ['class' => 'form-control']) !!}
 
-  {!! Form::label('URL', trans('strings.url')) !!}
-  {!! Form::text('url', $study->url, ['class' => 'form-control']) !!}
+    {!! Form::label('Company', trans('strings.company')) !!}
+    {!! Form::text('company', $study->company, ['class' => 'form-control']) !!}
 
-  {!! Form::label('Start', trans('strings.date')) !!}
-  {!! Form::date('start', $study->start, ['class' => 'form-control']) !!}
+    {!! Form::label('Description', trans('strings.description')) !!}
+    {!! Form::textarea('description', $study->description, ['class' => 'form-control']) !!}
 
-  {!! Form::label('End', trans('strings.date')) !!}
-  {!! Form::date('end', $study->end, ['class' => 'form-control']) !!}
+    {!! Form::label('URL', trans('strings.url')) !!}
+    {!! Form::text('url', $study->url, ['class' => 'form-control']) !!}
 
-  {!! Form::label('Photo', trans('strings.image')) !!}
-  {!! Form::file('photo', null, ['class' => 'form-control']) !!}
+    {!! Form::label('Start', trans('strings.date')) !!}
+    {!! Form::date('start', $study->start, ['class' => 'form-control']) !!}
 
-  {!! Form::label('Complete', trans('strings.complete')) !!}
-  {!! Form::hidden('complete', false) !!}
-  {!! Form::checkbox('complete', true, $study->complete) !!}
+    {!! Form::label('End', trans('strings.date')) !!}
+    {!! Form::date('end', $study->end, ['class' => 'form-control']) !!}
 
-  <br>
+    {!! Form::label('Photo', trans('strings.image')) !!}
+    {!! Form::file('photo', null, ['class' => 'form-control']) !!}
 
-  {{ Form::submit('Update', array('class' => 'btn btn-success'))}}
+    {!! Form::label('Complete', trans('strings.complete')) !!}
+    {!! Form::hidden('complete', false) !!}
+    {!! Form::checkbox('complete', true, $study->complete) !!}
 
-{!! Form::close() !!}
+    <br>
+
+    {{ Form::submit('Update', array('class' => 'btn btn-success'))}}
+
+    {!! Form::close() !!}
+
+  </div>
 
 @stop
