@@ -11,6 +11,11 @@ class CoursesTableSeeder extends Seeder
      */
     public function run()
     {
-      $course = factory(App\Course::class, 20)->create();
+      factory(App\Course::class)->create([
+        'name' => 'Curso de Programación de Apps Moviles',
+        'company' => 'Universidad Complutense de Madrid'
+      ]);
+
+      $course = factory(App\Course::class, 10)->create();
     }
 }

@@ -12,15 +12,6 @@ class StudiesTableSeeder extends Seeder
     public function run()
     {
       factory(App\Study::class)->create([
-        'name' => 'Bachelor Degree in Systems Engineering',
-        'company' => 'UNAD',
-        'start' => '2016-10-17',
-        'end' => '2017-10-17',
-        'url' => 'https://estudios.unad.edu.co/ingenieria-de-sistemas/acerca-del-programa',
-        'description' => 'The Software Systems Engineering is to contribute to education for all in the form of distance education and relying on the use of information and communications technology, to train professionals to help generate solutions to the problems in the field of information, computing, and communications systems with a solid foundation autonomous, ethical, entrepreneurial spirit and solidarity, supporting communities with technological proposals at the local, regional and international levels.'
-      ]);
-
-      factory(App\Study::class)->create([
         'name' => 'Associate Degree in IT Systems Analysis and Development',
         'company' => 'SENA',
         'start' => '2015-07-17',
